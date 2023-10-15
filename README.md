@@ -1,4 +1,4 @@
-# Order Packaging System
+# Order Packager
 
 The Order Packaging System is a Rails application designed to streamline and optimize the packaging of products within orders. It manages products, packages, and orders, ensuring the most efficient packaging solutions are employed for each order.
 
@@ -14,8 +14,8 @@ This project expects the following tools installed on your devise.
 ### Clone the repository
 
 ```shell
-git clone https://github.com/de-ahsan/careviso_take_home.git
-cd careviso_take_home
+git clone https://github.com/anees-z-01/order-packager.git
+cd order-packager
 ```
 
 ### Install dependencies
@@ -58,3 +58,7 @@ bundle exec rspec
     1. We can improve views (make responsive)
     2. Add more robust and user friendly error display
     3. We can just create the API app for this and use separate front-end/postman to play around
+
+## Package selection as a service
+
+`app/services/package_selector.rb` is the useful design boundary to review alongside its specs. Distinguish the implemented selection rule from a claim of globally optimal packing. Good next cases include empty orders, quantities, unavailable package combinations, and updates made while an order is being reviewed. A sample order and its selected packages would make the UI easier to evaluate; use synthetic inventory.
